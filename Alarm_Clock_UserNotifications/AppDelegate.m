@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "UNNotificationsManager.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
@@ -18,6 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    AVAudioSession *audioSession=[AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [audioSession setActive:YES error:nil];
     
     [UNNotificationsManager registerLocalNotification];
     
@@ -54,6 +59,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end

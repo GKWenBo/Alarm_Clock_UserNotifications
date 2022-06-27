@@ -7,6 +7,7 @@
 //
 
 #import "UNNotificationsManager.h"
+#import "WBAVAudioPlayerManager.h"
 
 NSString * const UNDidReciveRemoteNotifationKey = @"UNDidReciveRemateNotifationKey";
 NSString * const UNDidReciveLocalNotifationKey = @"UNDidReciveLocalNotifationKey";
@@ -15,6 +16,7 @@ NSString * const UNNotifationInfoIdentiferKey = @"UNNotifationInfoIdentiferKey";
 @interface UNNotificationsManager ()<UNUserNotificationCenterDelegate>
 
 @property (nonatomic, strong) dispatch_semaphore_t semaphore;
+@property (nonatomic, strong) WBAVAudioPlayerManager *playerManager;
 
 @end
 
@@ -336,6 +338,10 @@ NSString * const UNNotifationInfoIdentiferKey = @"UNNotifationInfoIdentiferKey";
 #pragma mark -- UNUserNotificationCenterDelegate
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler  API_AVAILABLE(ios(10.0)) {
     
+    NSString *path = [[NSBundle mainBundle] pathForAuxiliaryExecutable:@"hotM_02.caf"];
+    
+    [self.playerManager playWithFilePath:path];
+    
     if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         
         NSDictionary * userInfo = notification.request.content.userInfo;
@@ -348,6 +354,10 @@ NSString * const UNNotifationInfoIdentiferKey = @"UNNotifationInfoIdentiferKey";
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler  API_AVAILABLE(ios(10.0)){
+    
+    NSString *path = [[NSBundle mainBundle] pathForAuxiliaryExecutable:@"hotM_02.caf"];
+    
+    [self.playerManager playWithFilePath:path];
     
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         
@@ -395,6 +405,13 @@ NSString * const UNNotifationInfoIdentiferKey = @"UNNotifationInfoIdentiferKey";
         _semaphore = dispatch_semaphore_create(1);
     }
     return _semaphore;
+}
+
+- (WBAVAudioPlayerManager *)playerManager {
+    if (!_playerManager) {
+        _playerManager = [[WBAVAudioPlayerManager alloc] init];
+    }
+    return _playerManager;
 }
 
 @end
