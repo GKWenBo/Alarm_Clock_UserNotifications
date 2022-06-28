@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C8030DC286A9D08003432F4 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8030DB286A9D08003432F4 /* NotificationService.m */; };
+		0C8030E0286A9D08003432F4 /* NotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0C8030D8286A9D08003432F4 /* NotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		890618881ED3E291003C78D2 /* AddClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890618871ED3E291003C78D2 /* AddClockViewController.m */; };
 		8906188B1ED3E310003C78D2 /* RepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906188A1ED3E310003C78D2 /* RepeatViewController.m */; };
 		8906188E1ED3E3C9003C78D2 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906188D1ED3E3C9003C78D2 /* MusicViewController.m */; };
@@ -51,6 +53,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0C8030DE286A9D08003432F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89E841F91EC548FF00563E97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C8030D7286A9D08003432F4;
+			remoteInfo = NotificationExtension;
+		};
 		89E8421B1EC548FF00563E97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 89E841F91EC548FF00563E97 /* Project object */;
@@ -67,7 +76,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0C8030E1286A9D08003432F4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0C8030E0286A9D08003432F4 /* NotificationExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0C8030D8286A9D08003432F4 /* NotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C8030DA286A9D08003432F4 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		0C8030DB286A9D08003432F4 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		0C8030DD286A9D08003432F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		890618861ED3E291003C78D2 /* AddClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClockViewController.h; sourceTree = "<group>"; };
 		890618871ED3E291003C78D2 /* AddClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClockViewController.m; sourceTree = "<group>"; };
 		890618891ED3E310003C78D2 /* RepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatViewController.h; sourceTree = "<group>"; };
@@ -148,6 +175,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0C8030D5286A9D08003432F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89E841FE1EC548FF00563E97 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +207,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C8030D9286A9D08003432F4 /* NotificationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0C8030DA286A9D08003432F4 /* NotificationService.h */,
+				0C8030DB286A9D08003432F4 /* NotificationService.m */,
+				0C8030DD286A9D08003432F4 /* Info.plist */,
+			);
+			path = NotificationExtension;
+			sourceTree = "<group>";
+		};
 		8984C5BB1ED516FF00110D4F /* YYModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +328,7 @@
 				89E842031EC548FF00563E97 /* Alarm_Clock_UserNotifications */,
 				89E8421D1EC548FF00563E97 /* Alarm_Clock_UserNotificationsTests */,
 				89E842281EC548FF00563E97 /* Alarm_Clock_UserNotificationsUITests */,
+				0C8030D9286A9D08003432F4 /* NotificationExtension */,
 				89E842021EC548FF00563E97 /* Products */,
 				8984C5C31ED521CF00110D4F /* Frameworks */,
 			);
@@ -295,6 +340,7 @@
 				89E842011EC548FF00563E97 /* Alarm_Clock_UserNotifications.app */,
 				89E8421A1EC548FF00563E97 /* Alarm_Clock_UserNotificationsTests.xctest */,
 				89E842251EC548FF00563E97 /* Alarm_Clock_UserNotificationsUITests.xctest */,
+				0C8030D8286A9D08003432F4 /* NotificationExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,9 +354,9 @@
 				89D50B791ED43E9500EF24DD /* Lib */,
 				89E1BFC71ED2DED100DE3D29 /* Controller */,
 				89E1BFC81ED2DED100DE3D29 /* Model */,
-				89E1BFC91ED2DED100DE3D29 /* View */,
 				89E842071EC548FF00563E97 /* AppDelegate.h */,
 				89E842081EC548FF00563E97 /* AppDelegate.m */,
+				89E1BFC91ED2DED100DE3D29 /* View */,
 				89E8420D1EC548FF00563E97 /* Main.storyboard */,
 				89E842101EC548FF00563E97 /* Assets.xcassets */,
 				89E842041EC548FF00563E97 /* Supporting Files */,
@@ -404,6 +450,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0C8030D7286A9D08003432F4 /* NotificationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C8030E4286A9D08003432F4 /* Build configuration list for PBXNativeTarget "NotificationExtension" */;
+			buildPhases = (
+				0C8030D4286A9D08003432F4 /* Sources */,
+				0C8030D5286A9D08003432F4 /* Frameworks */,
+				0C8030D6286A9D08003432F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationExtension;
+			productName = NotificationExtension;
+			productReference = 0C8030D8286A9D08003432F4 /* NotificationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		89E842001EC548FF00563E97 /* Alarm_Clock_UserNotifications */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89E8422E1EC548FF00563E97 /* Build configuration list for PBXNativeTarget "Alarm_Clock_UserNotifications" */;
@@ -411,10 +474,12 @@
 				89E841FD1EC548FF00563E97 /* Sources */,
 				89E841FE1EC548FF00563E97 /* Frameworks */,
 				89E841FF1EC548FF00563E97 /* Resources */,
+				0C8030E1286A9D08003432F4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0C8030DF286A9D08003432F4 /* PBXTargetDependency */,
 			);
 			name = Alarm_Clock_UserNotifications;
 			productName = Alarm_Clock_UserNotifications;
@@ -466,6 +531,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "欧阳荣";
 				TargetAttributes = {
+					0C8030D7286A9D08003432F4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						DevelopmentTeam = 43WNAPBJGK;
+						ProvisioningStyle = Automatic;
+					};
 					89E842001EC548FF00563E97 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 43WNAPBJGK;
@@ -500,11 +570,19 @@
 				89E842001EC548FF00563E97 /* Alarm_Clock_UserNotifications */,
 				89E842191EC548FF00563E97 /* Alarm_Clock_UserNotificationsTests */,
 				89E842241EC548FF00563E97 /* Alarm_Clock_UserNotificationsUITests */,
+				0C8030D7286A9D08003432F4 /* NotificationExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0C8030D6286A9D08003432F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89E841FF1EC548FF00563E97 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,6 +616,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0C8030D4286A9D08003432F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C8030DC286A9D08003432F4 /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89E841FD1EC548FF00563E97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,6 +679,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0C8030DF286A9D08003432F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C8030D7286A9D08003432F4 /* NotificationExtension */;
+			targetProxy = 0C8030DE286A9D08003432F4 /* PBXContainerItemProxy */;
+		};
 		89E8421C1EC548FF00563E97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 89E842001EC548FF00563E97 /* Alarm_Clock_UserNotifications */;
@@ -625,6 +716,79 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0C8030E2286A9D08003432F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 43WNAPBJGK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 欧阳荣. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "OYR.Alarm-Clock-UserNotifications.NotificationExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0C8030E3286A9D08003432F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 43WNAPBJGK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 欧阳荣. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "OYR.Alarm-Clock-UserNotifications.NotificationExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		89E8422C1EC548FF00563E97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -792,6 +956,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C8030E4286A9D08003432F4 /* Build configuration list for PBXNativeTarget "NotificationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C8030E2286A9D08003432F4 /* Debug */,
+				0C8030E3286A9D08003432F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		89E841FC1EC548FF00563E97 /* Build configuration list for PBXProject "Alarm_Clock_UserNotifications" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

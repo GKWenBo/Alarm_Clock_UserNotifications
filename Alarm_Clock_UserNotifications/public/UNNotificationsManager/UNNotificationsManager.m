@@ -99,7 +99,10 @@ NSString * const UNNotifationInfoIdentiferKey = @"UNNotifationInfoIdentiferKey";
 //    }else {
 //        aContent.categoryIdentifier = categryStopIdf;
 //    }
-    
+    NSMutableDictionary *dict = aContent.userInfo ? [aContent.userInfo mutableCopy] : @{}.mutableCopy;
+    dict[@"mutable-content"] = @"1";
+    [dict setObject:@{@"mutable-content" : @"1"} forKey:@"aps"];
+    aContent.userInfo = dict;
     [self addNotificationWithRequest:[UNNotificationRequest requestWithIdentifier:identifer content:aContent trigger:trigger] completionHanler:handler];
 }
 
